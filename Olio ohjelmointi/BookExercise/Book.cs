@@ -45,6 +45,21 @@ namespace Olio_ohjelmointi.BookExercise
                 this.id = " ";
             }
         }
+        public void CompareBooks(Book book)
+        {
+            if (this.price > book.price)
+            {
+                Console.WriteLine(this.title + " on kalliimpi kuin " + book.title);
+            }
+            else if (this.price == book.price)
+            {
+                Console.WriteLine(this.title + " on samanhintainen " + book.title);
+            }
+            else 
+            {
+                Console.WriteLine(this.title + " on halvempi kuin " + book.title);
+            }
+        }
             
     }        
 }
