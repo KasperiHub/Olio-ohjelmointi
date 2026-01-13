@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarExercise", "CarExercis\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyExercise", "CompanyExercise\CompanyExercise.csproj", "{ADE640C0-FB56-4637-B6A7-4190D62BBBB0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookEx", "BookEx", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CarEx", "CarEx", "{D9A0A5AC-62E0-4DB4-B7D8-974E9E2F53BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompanyEx", "CompanyEx", "{EA4E128E-2A08-4DEE-92F3-0A610D0D9291}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD11E140-122F-4C29-9700-1EA2D422A7B9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{2F83320C-9213-4AA5-9A0A-C150C093C5AD} = {D9A0A5AC-62E0-4DB4-B7D8-974E9E2F53BF}
+		{ADE640C0-FB56-4637-B6A7-4190D62BBBB0} = {EA4E128E-2A08-4DEE-92F3-0A610D0D9291}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9B6AF140-2E36-4BA0-A13B-F3A947BAFDCC}

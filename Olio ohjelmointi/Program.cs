@@ -1,6 +1,4 @@
-﻿using Olio_ohjelmointi.BookExercise;
-
-namespace Olio_ohjelmointi
+﻿namespace Olio_ohjelmointi
 {
     internal class Program
     {
