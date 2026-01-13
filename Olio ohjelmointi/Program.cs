@@ -16,7 +16,7 @@ namespace Olio_ohjelmointi
             mathBook.author = "Matti Meikäläinen";
             mathBook.PrintBookInfo();
             abcBook.CompareBooks(mathBook);
-            mathBook.CompareBooks(abcBook);
+            mathBook.CompareBooks(abcBook); //moi
         }
 
     }
