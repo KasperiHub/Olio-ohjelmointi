@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36717.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookexercise", "Olio ohjelmointi\Bookexercise.csproj", "{DD11E140-122F-4C29-9700-1EA2D422A7B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarExercis", "CarExercis\CarExercis.csproj", "{2F83320C-9213-4AA5-9A0A-C150C093C5AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarExercise", "CarExercis\CarExercise.csproj", "{2F83320C-9213-4AA5-9A0A-C150C093C5AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyExercise", "CompanyExercise\CompanyExercise.csproj", "{ADE640C0-FB56-4637-B6A7-4190D62BBBB0}"
 EndProject

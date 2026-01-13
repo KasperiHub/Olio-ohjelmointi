@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarExercis\CarExercis.csproj" />
+    <ProjectReference Include="..\CarExercis\CarExercise.csproj" />
   </ItemGroup>
 
 </Project>
