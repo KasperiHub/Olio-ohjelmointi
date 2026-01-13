@@ -28,7 +28,7 @@ namespace CarExercis
             Console.WriteLine("Anna auton merkki");
             this.brand = Console.ReadLine();
             Console.WriteLine("Anna auton vauhti");
-            double.TryParse(Console.ReadLine(), out this.speed);
+            double.TryParse(Console.ReadLine(), out this.speed); 
         }
         public void ShowCarinfo()
         {
