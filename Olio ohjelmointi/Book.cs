@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Olio_ohjelmointi.BookExercise
+namespace Olio_ohjelmointi
 {
     internal class Book
     {
@@ -15,10 +15,10 @@ namespace Olio_ohjelmointi.BookExercise
 
         public Book()
         {
-            this.title = string.Empty;
-            this.author = string.Empty;
-            this.price = 0;
-            this.id = string.Empty;
+            title = string.Empty;
+            author = string.Empty;
+            price = 0;
+            id = string.Empty;
 
         }
 
@@ -32,32 +32,32 @@ namespace Olio_ohjelmointi.BookExercise
 
         public void PrintBookInfo()
         {
-            Console.WriteLine($"{this.author} : {this.title} : {this.price} : {this.id}");
+            Console.WriteLine($"{author} : {title} : {price} : {id}");
         }
         public void SetId(string idvalue)      
         {
             if (idvalue.Length == 5)
             {
-                this.id = idvalue;
+                id = idvalue;
             }
             else
             {
-                this.id = " ";
+                id = " ";
             }
         }
         public void CompareBooks(Book book)
         {
-            if (this.price > book.price)
+            if (price > book.price)
             {
-                Console.WriteLine(this.title + " on kalliimpi kuin " + book.title);
+                Console.WriteLine(title + " on kalliimpi kuin " + book.title);
             }
-            else if (this.price == book.price)
+            else if (price == book.price)
             {
-                Console.WriteLine(this.title + " on samanhintainen " + book.title);
+                Console.WriteLine(title + " on samanhintainen " + book.title);
             }
             else 
             {
-                Console.WriteLine(this.title + " on halvempi kuin " + book.title);
+                Console.WriteLine(title + " on halvempi kuin " + book.title);
             }
         }
             
