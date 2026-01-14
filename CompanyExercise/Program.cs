@@ -11,6 +11,24 @@
             // c1.ShowCompany(); turhakoodi 
             // c2.ShowCompany(); turhakoodi
 
+        
+            /*
+            Company[]  companies = new Company[5];
+            companies[0] = new Company("Twitter", "Karjalankatu", " + 358458559353", 200000, 15000);
+            companies[1] = new Company("Bitter", "Karjalankatu", " + 358458559353", 200000, 15000);
+            companies[2] = new Company("Shitter", "Karjalankatu", " + 358458559353", 200000, 15000);
+            companies[3] = new Company("Litter", "Karjalankatu", " + 358458559353", 200000, 15000);
+            companies[4] = new Company("Glitter", "Karjalankatu", " + 358458559353", 200000, 15000);
+
+            foreach (Company currentCompany in companies)
+            {
+                Console.WriteLine(currentCompany.ToString());
+            }
+
+            */
+
+          
+
 
             Console.WriteLine(c1.ToString());
             c1.Tilanne();
@@ -23,6 +41,7 @@
             Console.WriteLine("Firma uudestaan");
             Company c3 = new Company(c1);
             Console.WriteLine(c3.ToString());
+            Console.ReadLine();
 
 
         }
