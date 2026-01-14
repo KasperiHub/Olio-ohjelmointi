@@ -5,6 +5,8 @@
         static void Main(string[] args)
         {
 
+            //Taulukko
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Työntekijä taulukko");
             Console.ResetColor();
@@ -18,6 +20,7 @@
                 Console.WriteLine(currentEmployees.ToString());
             }
 
+            // Vertaaminen
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
@@ -26,6 +29,8 @@
             employees[2].CompareSalary(employees[0]);
             employees[1].CompareSalary(employees[2]);
             Console.WriteLine();
+
+            // Muilla tavoilla printtaaminen
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Eri tavoilla tulostetut tiedot");
