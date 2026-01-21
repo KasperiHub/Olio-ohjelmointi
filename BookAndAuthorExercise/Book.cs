@@ -93,7 +93,7 @@ namespace BookAndAuthorExercise
 
         public override string? ToString()
         {
-            return $"{this.author}, {this.Name}, {this.publisher}, {this.Price:F2}, {this.Isbn} , teema: {theme}";
+            return $"Author: {this.author}, Name: {this.Name}, Publisher: {this.publisher}, Price: {this.Price:F2}, ISBN: {this.Isbn} , Theme: {theme}";
         }
 
         /*

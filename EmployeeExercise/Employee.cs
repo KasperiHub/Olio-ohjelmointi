@@ -50,7 +50,7 @@ namespace EmployeeExercise
                 
             {
                 double väärin = (employee.palkka - palkka) / employee.palkka * 100;
-                Console.WriteLine($"{nimi} palkka on {väärin:F2}%  {employee.nimi} palkasta");
+                Console.WriteLine($"{nimi} palkka on {väärin:F2}% pienempi kuin {employee.nimi} palkka");
             }
         }
         public override string? ToString()

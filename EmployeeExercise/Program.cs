@@ -1,4 +1,6 @@
-﻿namespace EmployeeExercise
+﻿using System.ComponentModel.Design;
+
+namespace EmployeeExercise
 {
     internal class Program
     {
@@ -25,12 +27,15 @@
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Työn tekijöiden palkka verranto");
+            Console.WriteLine("Työntekijöiden palkka verranto");   
             Console.ResetColor();
 
-            employees[2].CompareSalary(employees[0]);
-            employees[1].CompareSalary(employees[2]);
-            employees[0].CompareSalary(employees[1]);
+            for (int i = 0; i < 3; i++)  
+            {
+                int seuraava = (i + 1) % 3; // miten loopata taulukko, jolla voi mennä taulukon alkuun ilman, että crashaa. Taulukon koko = % x
+                employees[i].CompareSalary(employees[seuraava]); 
+            }
+
 
             Console.WriteLine();
 
