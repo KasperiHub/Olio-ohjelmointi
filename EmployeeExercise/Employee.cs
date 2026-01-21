@@ -44,7 +44,7 @@ namespace EmployeeExercise
             }
             else if (palkka == employee.palkka)
             {
-                Console.WriteLine($"{nimi} tienaa yhtä paljom {employee.nimi}");
+                Console.WriteLine($"{nimi} tienaa yhtä paljon {employee.nimi}");
             }
             else
                 
