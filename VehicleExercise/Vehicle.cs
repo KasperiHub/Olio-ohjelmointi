@@ -29,13 +29,13 @@
             $"Model year: {modelYear}\n" +
             $"Price: {price}\n";
     }
-        public virtual void PrintInformation()
+        public virtual string PrintInformation()
         {
-            Console.WriteLine(
-                $"Brand: {this.brand}\n" +
-                $"Model: {this.model}\n" +
-                $"ModelYear: {this.modelYear}\n" +
-                $"Price: {this.price}\n");
-        }
+        return 
+            $"Brand: {brand}\n" +
+            $"Model: {model}\n" +
+            $"ModelYear: {modelYear}\n" +
+            $"Price: {price}\n";
+    }
     
 }

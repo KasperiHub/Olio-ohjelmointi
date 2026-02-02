@@ -17,12 +17,20 @@
         this.engine = string.Empty;
         this.doors = 0;
     }
+    public override string PrintInformation()
+    {
+        return base.PrintInformation() +
+            $"Type: {type}\n" +
+            $"Engine: {engine}L\n" +
+            $"Doors: {doors}\n";
+    }
+
 
     public override string ToString()
     {
         return base.ToString() +
                $"Type: {type}\n" +
-               $"Engine: {engine}\n" +
+               $"Engine: {engine}L\n" +
                $"Doors: {doors}\n";
     }
 

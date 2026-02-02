@@ -19,41 +19,33 @@ namespace VehicleExercise
             Truck Truck3 = new Truck("Sisu", "S-sarja", "1995", 50100, "Vetopöytäauto", "9", 2, "4000kg", 22);
 
             // Autot tulostettuna
-            Console.WriteLine("Car");
-            Car1.PrintInformation();
-            Console.WriteLine("Car2");
-            Car2.PrintInformation();
-            Console.WriteLine("Car3");
-            Car4.PrintInformation();
+            Console.WriteLine($"Car1\n{Car1.PrintInformation()}");
+            Console.WriteLine($"Car2\n{Car2.PrintInformation()}");
+            Console.WriteLine($"Car3\n{Car4.PrintInformation()}");
 
             // Rekat tulostettuna
-            Console.WriteLine("Truck");
-            Console.Write(Truck1.ToString());
-            Console.WriteLine($"\nTruck2");
-            Console.Write(Truck2.ToString());
-            Console.WriteLine("\nTruck3");
-            Console.WriteLine(Truck3.ToString());
-            Console.WriteLine();
+            Console.WriteLine($"Truck1\n{Truck1.ToString()}");
+            Console.WriteLine($"Truck2\n{Truck2.ToString()}");
+            Console.WriteLine($"Truck3\n{Truck3.ToString()}");
             
-
             // Equals Funktio
             Console.WriteLine("Equals funktio");
             if (Car2.Equals(Car1))
             {
-                Console.WriteLine( $"Tieto toistuu, auto {Car2.brand} {Car2.model} ({Car2.modelYear}). Hinta: {Car2.price}" +
-                $" ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat. Hinta :{Car1.price} ");
+                Console.WriteLine($"Tieto toistuu \nAuto1 {Car2.brand} {Car2.model} ({Car2.modelYear}). Hinta: {Car2.price}\n" +
+                $"Auto2 {Car1.brand} {Car1.model} ({Car1.modelYear}). Hinta :{Car1.price}\n" + $"Autot ovat samoja");
             }
             else
             {
-                return;
+                Console.WriteLine("Autot eivät ole samoja.");
             }
             Console.WriteLine();
 
             Console.WriteLine("Equals funktio");
             if (Car4.Equals(Car1))
             {
-                Console.WriteLine($"Tieto toistuu, auto {Car4.brand} {Car4.model} ({Car4.modelYear}, Hinta: {Car4.price}) " +
-                $" ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat. Hinta:{Car1.price}");
+                Console.WriteLine($"Tieto toistuu \nAuto1 {Car2.brand} {Car2.model} ({Car2.modelYear}). Hinta: {Car2.price}\n" +
+                $"ja Auto2 {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat. Hinta :{Car1.price} ");
             }
             else
             {
@@ -71,16 +63,17 @@ namespace VehicleExercise
             Console.Write("Suoritetun tyyppimuunnoksen tulos:");
             if (car3 == truck4)
             {
-                Console.WriteLine(" Tyyppimuunnos onnistui");
+                Console.WriteLine(" Tyyppimuunnos onnistui.");
             }
             else
             {
-                Console.WriteLine(" Tyyppimuunnos epäonnistui");
+                Console.WriteLine(" Tyyppimuunnos epäonnistui.");
             }
+            Console.WriteLine();
 
             // CalculateConsumption Funktio
 
-
+            Console.WriteLine("Auton kulutus matkalla");
             Console.WriteLine("Anna matkan pituus");
             string luku = Console.ReadLine();
 
