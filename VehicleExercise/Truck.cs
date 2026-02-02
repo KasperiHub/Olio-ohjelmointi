@@ -24,6 +24,6 @@
     {
         return base.ToString() +
                $"Load: {load}\n" +
-               $"Consumption: 100 Kilometrin matkalle tarvii polttoainetta: {CalculateConsumption(100)}L\n";
+               $"Consumption: {consumption} L\n";
     }
 }

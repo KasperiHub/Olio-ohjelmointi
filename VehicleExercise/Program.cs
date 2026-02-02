@@ -15,8 +15,10 @@ namespace VehicleExercise
 
 
             Truck Truck1 = new Truck("Scania", "R500", "2020", 75300, "Vetopöytäauto","9", 2, "5000kg", 21);
+            Truck Truck2 = new Truck("Sisu", "E-sarja", "1997", 60300, "Vetopöytäauto", "9", 2, "4500kg", 23);
+            Truck Truck3 = new Truck("Sisu", "S-sarja", "1995", 50100, "Vetopöytäauto", "9", 2, "4000kg", 22);
 
-            
+
             Console.WriteLine("Car");
             Car1.PrintInformation();
             Console.WriteLine("Car2");
@@ -24,12 +26,17 @@ namespace VehicleExercise
             Console.WriteLine("Car3");
             Car4.PrintInformation();
 
-            Console.WriteLine("Truck:");
+            Console.WriteLine("Truck");
             Console.WriteLine(Truck1.ToString());
+            Console.WriteLine();
+            Console.WriteLine("Truck2");
+            Console.WriteLine(Truck2.ToString());
+            Console.WriteLine();
+            Console.WriteLine("Truck3");
+            Console.WriteLine(Truck3.ToString());
             // Console.WriteLine(); Console.WriteLine("Vehicle:");
             // Vehicle1.PrintInformation();
             Console.WriteLine();
-
 
             Console.WriteLine("Equals funktio");
             if (Car2.Equals(Car1))
@@ -56,9 +63,23 @@ namespace VehicleExercise
             }
             Console.WriteLine();
 
+            Truck truck4 = new Truck("Volvo", "FH13", "2015", 69025, "Vetopöytäauto", "12.8", 2, "6000kg", 20);
 
+            Console.WriteLine("Suoritetaan tyyppimuunnokset auto- ja kuorma-auton välillä");
+            Car car3 = truck4 as Car;
+            Console.WriteLine(car3.ToString());
 
-            Console.WriteLine("Anna matkan pituus");
+            Console.WriteLine("Suoritetun tyyppimuunnoksen tulos");
+            if (car3 == truck4)
+            {
+                Console.WriteLine("Tyyppimuunnos onnistui");
+            }
+            else
+            {
+                Console.WriteLine("Tyyppimuunnos epäonnistui");
+            }
+
+                Console.WriteLine("Anna matkan pituus");
             string luku = Console.ReadLine(); 
 
             double distance;
