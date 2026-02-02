@@ -29,5 +29,17 @@ namespace VehicleExercise
             base.PrintInformation();
             Console.Write($", Paino: {this.load}, Kulutus: {this.consumption}");
         }
+        public override string ToString()
+        {
+            return 
+                $"Auton merkki: {this.brand}\n" +
+                $"Malli: {this.model}\n" +
+                $"Vuosimalli: {this.modelYear}\n" +
+                $"Hinta: {this.price} euroa\n" +
+                $"Tyyppi: {this.type}\n" +
+                $"Kuorma: {this.load} kg\n" +
+                $"Kulutus: {this.consumption} L/100km\n";
+
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace VehicleExercise
         public override void PrintInformation()
         {
             base.PrintInformation();
-            Console.Write($", Type: {this.type}");
+            Console.WriteLine($" Type: {this.type}");
         }
     }
 }

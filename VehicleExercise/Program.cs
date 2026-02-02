@@ -13,7 +13,7 @@
             Console.WriteLine("Car");
             Car1.PrintInformation();
             Console.WriteLine(); Console.WriteLine("Truck:");
-            Truck1.PrintInformation();
+            Console.WriteLine(Truck1.ToString());
             // Console.WriteLine(); Console.WriteLine("Vehicle:");
             // Vehicle1.PrintInformation();
             Console.WriteLine();

@@ -30,7 +30,11 @@ namespace VehicleExercise
         }
         public virtual void PrintInformation()
         {
-            Console.Write($"Brand: {this.brand}, Model: {this.model}, modelYear: {this.modelYear}, price: {this.price}");
+            Console.WriteLine(
+                $"Brand: {this.brand}" +
+                $" Model: {this.model} " +
+                $"modelYear: {this.modelYear}" +
+                $"price: {this.price}");
         }
     }
 }
