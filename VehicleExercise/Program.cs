@@ -21,18 +21,28 @@
             Console.WriteLine();
 
 
-            Console.WriteLine("Equals");
-            Car Car3 = Car2;
-            if (Car3.Equals(Car1))
+            Console.WriteLine("Equals funktio");
+            if (Car2.Equals(Car1))
             {
-                Console.WriteLine( $"Tieto toistuu, auto {Car3.brand} {Car3.model} ({Car3.modelYear}) " +
-                $"ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat."
-);
-
+                Console.WriteLine( $"Tieto toistuu, auto {Car2.brand} {Car2.model} ({Car2.modelYear}) " +
+                $"ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat.");
             }
             else
-            { 
-                Console.WriteLine(Car1.ToString()); 
+            {
+                return;
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Equals funktio");
+            if (Car4.Equals(Car1))
+            {
+                Console.WriteLine($"Tieto toistuu, auto {Car4.brand} {Car4.model} ({Car4.modelYear}) " +
+                $"ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat.");
+            }
+            else
+            {
+                Console.WriteLine("Autot eivät ole samoja.");
+                return;
             }
             Console.WriteLine();
 
