@@ -3,7 +3,7 @@
     public string brand;
     public string model;
     public string modelYear;
-    protected double price;
+    public double price;
 
     public Vehicle(string brand, string model, string modelYear, double price)
     {
@@ -35,7 +35,7 @@
                 $"Brand: {this.brand}\n" +
                 $"Model: {this.model}\n" +
                 $"ModelYear: {this.modelYear}\n" +
-                $"price: {this.price}\n");
+                $"Price: {this.price}\n");
         }
     
 }

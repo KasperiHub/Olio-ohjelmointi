@@ -3,9 +3,7 @@
     public string load;
     public double consumption;
 
-    public Truck(string brand, string model, string modelYear, double price,
-                 string type, string load, double consumption)
-        : base(brand, model, modelYear, price, type)
+    public Truck(string brand, string model, string modelYear, double price, string type, string engine, double doors, string load, double consumption) : base(brand, model, modelYear, price, type, engine, doors)
     {
         this.load = load;
         this.consumption = consumption;

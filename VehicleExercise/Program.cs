@@ -1,4 +1,6 @@
-﻿namespace VehicleExercise
+﻿using System.Runtime.CompilerServices;
+
+namespace VehicleExercise
 {
     internal class Program
     {
@@ -6,15 +8,23 @@
         {
             // Vehicle Vehicle1 = new Vehicle("Toyota", "Avensis", "2007", 900); // Pitää antaa default valuet aka. this.price = 0; 
 
-            Car Car1 = new Car("Toyota", "Corolla", "2005", 800, "Sedan");
-            Car Car4 = new Car("Toyota", "Avencis", "2008", 1000, "Hatchback");
-            Car Car2 = new Car("Toyota", "Corolla", "2005", 1500, "Sedan");
+            Car Car1 = new Car("Toyota", "Corolla", "2005", 800, "Sedan", "1.9L", 4);
+            Car Car4 = new Car("Toyota", "Avencis", "2008", 1000, "Hatchback", "2.0L", 4);
+            Car Car2 = new Car("Toyota", "Corolla", "2005", 1500, "Sedan", "1.9L", 4);
 
-            Truck Truck1 = new Truck("Scania", "R500", "2020", 75300, "Vetopöytäauto", "5000kg", 21);
 
+
+            Truck Truck1 = new Truck("Scania", "R500", "2020", 75300, "Vetopöytäauto","9", 2, "5000kg", 21);
+
+            
             Console.WriteLine("Car");
             Car1.PrintInformation();
-            Console.WriteLine(); Console.WriteLine("Truck:");
+            Console.WriteLine("Car2");
+            Car2.PrintInformation();
+            Console.WriteLine("Car3");
+            Car4.PrintInformation();
+
+            Console.WriteLine("Truck:");
             Console.WriteLine(Truck1.ToString());
             // Console.WriteLine(); Console.WriteLine("Vehicle:");
             // Vehicle1.PrintInformation();
@@ -24,8 +34,8 @@
             Console.WriteLine("Equals funktio");
             if (Car2.Equals(Car1))
             {
-                Console.WriteLine( $"Tieto toistuu, auto {Car2.brand} {Car2.model} ({Car2.modelYear}) " +
-                $"ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat.");
+                Console.WriteLine( $"Tieto toistuu, auto {Car2.brand} {Car2.model} ({Car2.modelYear}). Hinta: {Car2.price}" +
+                $"ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat. Hinta :{Car1.price} ");
             }
             else
             {
@@ -36,8 +46,8 @@
             Console.WriteLine("Equals funktio");
             if (Car4.Equals(Car1))
             {
-                Console.WriteLine($"Tieto toistuu, auto {Car4.brand} {Car4.model} ({Car4.modelYear}) " +
-                $"ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat.");
+                Console.WriteLine($"Tieto toistuu, auto {Car4.brand} {Car4.model} ({Car4.modelYear}, Hinta: {Car4.price}) " +
+                $"ja auto {Car1.brand} {Car1.model} ({Car1.modelYear}) ovat samat. Hinta:{Car1.price}");
             }
             else
             {
