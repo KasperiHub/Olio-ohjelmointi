@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            // Vehicle Vehicle1 = new Vehicle("Toyota", "Avensis", "2007", 900); //Pitää antaa default valuet aka. this.price = 0;
+            // Vehicle Vehicle1 = new Vehicle("Toyota", "Avensis", "2007", 900); // Pitää antaa default valuet aka. this.price = 0; 
 
             Car Car1 = new Car("Toyota", "Corolla", "2005", 800, "Sedan");
             Car Car4 = new Car("Toyota", "Avencis", "2008", 1000, "Hatchback");
