@@ -40,7 +40,7 @@ namespace InterfaceExercise
 
         public override string? ToString()
         {
-            return $"Asiakkaan nimi: {nimi}, Asiakkaan ostokset {ostokset}"; 
+            return $"Asiakkaan nimi: {nimi}, Asiakkaan ostokset {ostokset} €"; 
         }
 
     }

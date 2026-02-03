@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,15 +12,17 @@ namespace InterfaceExercise
     {
         private string name;
         private double revenue;
+        private double products;
 
 
         private List<Product> productsList = new List<Product>();
         private List<Customer> customersList = new List<Customer>();
 
-        public Store(string name, double revenue)
+        public Store(string name, double revenue, double products)
         {
             this.name = name;
             this.revenue = revenue;
+            this.products = products;
             productsList = new List<Product>();
         }
 
@@ -49,6 +52,10 @@ namespace InterfaceExercise
             {
                 Console.WriteLine(p);
             }
+        }
+        public override string? ToString()
+        {
+            return $"Kaupan nimi: {this.name}, Kaupan liikevaihto: {this.revenue}, Kaupan tuotteiden määrä: {this.products}";
         }
 
 

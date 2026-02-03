@@ -6,6 +6,7 @@ namespace InterfaceExercise
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             List<Product> products = new List<Product>();
             products.Add(new Product("Uuni", 124.99, 450));
@@ -30,7 +31,7 @@ namespace InterfaceExercise
             Console.WriteLine();
 
 
-            Store KMarket = new Store("K-kauppa", 1000000);
+            Store KMarket = new Store("K-kauppa", 1000000, 12034);
             KMarket.AddProduct(new Product("Maito", 1, 150));
             KMarket.AddProduct(new Product("RedBull", 2.30, 200));
             KMarket.PrintProducts();
@@ -51,10 +52,12 @@ namespace InterfaceExercise
 
 
                     double bonus = d.GetBonus();
-                    Console.WriteLine($"{d.ToString()}, Bonus: {bonus:F2} €");
+                    Console.WriteLine($"{d.ToString()}, Bonus: {bonus:F3} €");
                 }
             }
             Console.WriteLine();
+
+            Console.WriteLine(KMarket.ToString());
     
             Console.ReadLine();
 
