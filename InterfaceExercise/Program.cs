@@ -19,15 +19,15 @@ namespace InterfaceExercise
 
             foreach (Product p in products)
             {
-                // Console.WriteLine(p);
-                if (p.MatchesName("Aurinkotuoli"))
+                if (p.MatchesName("Uuni"))
                 {
-                    Console.WriteLine("Aurinkotuoli löytyi");
+                    Console.WriteLine("Uuni löytyi");
                     Console.WriteLine(p.ToString());
 
                     Console.WriteLine($"Varaston arvo: {p.CalculateTotal():F2}");
                 }
             }
+            Console.WriteLine();
 
 
             Store KMarket = new Store("K-kauppa", 1000000);
@@ -40,6 +40,22 @@ namespace InterfaceExercise
             {
                 Console.WriteLine(d.ToString());
             }
+            Console.WriteLine();
+
+            foreach (Customer d in customersList)
+            {
+                if (d.MatchesName("Mikko Pakarinen"))
+                {
+                    Console.WriteLine("Mikko löytyi");
+                    Console.WriteLine(d.ToString());
+
+
+                    double bonus = d.GetBonus();
+                    Console.WriteLine($"{d.ToString()}, Bonus: {bonus:F2} €");
+                }
+            }
+            Console.WriteLine();
+    
             Console.ReadLine();
 
 

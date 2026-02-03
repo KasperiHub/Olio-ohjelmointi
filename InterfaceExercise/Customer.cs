@@ -18,17 +18,26 @@ namespace InterfaceExercise
 
         public double GetBonus()
         {
-            return 0;
+            if (ostokset <= 1000)
+            {
+                return ostokset * 0.02;
+            } 
+            else if (ostokset <= 2000) 
+            { 
+                return ostokset * 0.03;
+            } 
+            else 
+            { 
+                return ostokset * 0.05;
+            } 
         }
 
-        public bool MatchesName(string name)
+
+        public bool MatchesName(string value)
         {
-            return false;
+            return this.nimi == value;
         }
-        public bool MatchesNimi(string nimi)
-        {
-            return false;
-        }
+
         public override string? ToString()
         {
             return $"Asiakkaan nimi: {nimi}, Asiakkaan ostokset {ostokset}"; 
