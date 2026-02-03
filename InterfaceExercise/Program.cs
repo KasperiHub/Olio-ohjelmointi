@@ -1,7 +1,6 @@
-﻿using InterfaceExercise;
-using static System.Formats.Asn1.AsnWriter;
+﻿using static System.Formats.Asn1.AsnWriter;
 
-namespace InterFaceExcercise
+namespace InterfaceExercise
 {
     internal class Program
     {
@@ -18,7 +17,6 @@ namespace InterFaceExcercise
             customersList.Add(new Customer("Jari Jarinen", 740.00));
             customersList.Add(new Customer("Mikko Pakarinen" , 00.30));
 
-            
             foreach (Product p in products)
             {
                 // Console.WriteLine(p);
@@ -31,6 +29,7 @@ namespace InterFaceExcercise
                 }
             }
 
+
             Store KMarket = new Store("K-kauppa", 1000000);
             KMarket.AddProduct(new Product("Maito", 1, 150));
             KMarket.AddProduct(new Product("RedBull", 2.30, 200));
@@ -41,6 +40,9 @@ namespace InterFaceExcercise
             {
                 Console.WriteLine(d.ToString());
             }
+            Console.ReadLine();
+
+
         }
     }
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InterfaceExercise;
 
-namespace InterFaceExcercise
+namespace InterfaceExercise
 {
     internal class Store : IProducts, ICustomers
 
     {
         private string name;
         private double revenue;
+
 
         private List<Product> productsList = new List<Product>();
         private List<Customer> customersList = new List<Customer>();
@@ -20,33 +20,34 @@ namespace InterFaceExcercise
         {
             this.name = name;
             this.revenue = revenue;
+            productsList = new List<Product>();
         }
 
 
 
         public void AddCustomer(Customer customer)
         {
-            this.customersList.Add(customer);
+            customersList.Add(customer);
         }
 
         public void AddProduct(Product product)
         {
-            this.productsList.Add(product);
+            productsList.Add(product);
         }
 
-        public void PrintCustomers()
+        public void PrintCustomers()    
         {
-            foreach (Customer p in this.customersList)
+            foreach (Customer d in customersList)
             {
-                Console.WriteLine(p);
+                Console.WriteLine(d);
             }
         }
 
         public void PrintProducts()
         {
-            foreach (Product d in this.productsList)
+            foreach (Product p in productsList)
             {
-                Console.WriteLine(d);
+                Console.WriteLine(p);
             }
         }
 

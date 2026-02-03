@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InterfaceExercise;
 
-namespace InterFaceExcercise
+namespace InterfaceExercise
 {
     internal class Product : IProduct
     {
@@ -17,17 +16,17 @@ namespace InterFaceExcercise
         {
             this.name = name;
             this.price = price;
-            this.count = amount;
+            count = amount;
         }
 
         public double CalculateTotal()
         {
-            return this.price * this.count;
+            return price * count;
         }
 
         public bool MatchesName(string value)
         {
-            if (this.name == value)
+            if (name == value)
             {
                 return true;
             }
@@ -39,7 +38,7 @@ namespace InterFaceExcercise
 
         public override string? ToString()
         {
-            return $"Nimi: {this.name}, Hinta: {this.price}, Määrä: {this.count}";
+            return $"Nimi: {name}, Hinta: {price}, Määrä: {count}";
         }
     }
 }

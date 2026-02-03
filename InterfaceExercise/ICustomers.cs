@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InterfaceExercise
+namespace InterfaceExercise;
+
+internal interface ICustomers
 {
-    internal interface ICustomers
-    {
-        void AddCustomer(Customer customer);
-        void PrintCustomers();
-    }
+    void AddCustomer(Customer customer);
+    void PrintCustomers();
 }
