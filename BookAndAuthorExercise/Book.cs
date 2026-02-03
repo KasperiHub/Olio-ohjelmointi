@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookAndAuthorExercise
+
+namespace Literature //BookAndAuthorExercise
 {
     internal class Book
     {
@@ -12,11 +13,14 @@ namespace BookAndAuthorExercise
         private string author;
         public string publisher;
         private double price;
+        public static string theme = "default";
         private string? isbn;
-        public static string theme = "undefined";
-        private const double DiscountProcent = 0.9; // discout 10%
+        private const double discount = 0.9;
+
+        //length of isbn and 978 prefix
         private const int MaxLength = 13;
         private const string Prefix = "978";
+
 
         public Book()
         {
@@ -25,8 +29,6 @@ namespace BookAndAuthorExercise
             this.publisher = String.Empty;
             this.price = 0;
             this.isbn = String.Empty;
-            
-
         }
 
         public Book(string author, string publisher, string name, double price, string isbn)
@@ -38,23 +40,42 @@ namespace BookAndAuthorExercise
             Isbn = isbn;
         }
 
+
         public string? Name
         {
             get
             {
                 return name;
             }
+
             set
             {
-                if (value?.Length >= 1) //price kohdassa kun yrität tarkistaa 
+                if (value?.Length >= 1)
                 {
                     name = value;
                 }
             }
-        } // helpommin muokattava 
+        }
 
-        // public string Author { get => author; set => author = value; } helpommin ymmärrettävä
+        /*public string Author 
+        { 
+            get => author; set => author = value;  this also works, easier to change the previous one 
+        }
+        */
 
+        public string? Isbn  //Isbn method, didnt work without it for some reason
+        {
+            get => isbn;
+            set
+            {
+                if (value != null &&
+                    value.Length == MaxLength &&
+                    value.StartsWith(Prefix))
+                {
+                    isbn = value;
+                }
+            }
+        }
         public double Price
         {
             get => price;
@@ -62,69 +83,50 @@ namespace BookAndAuthorExercise
             {
                 if (value > 30)
                 {
-                    price = value * DiscountProcent;
+                    price = value * discount;
                 }
                 else
                 {
                     price = value;
                 }
-            }
-        }
-        public string? Isbn
-        {
-            get => isbn;
-            set
-            {
-                if (value?.Length == MaxLength && value.StartsWith(Prefix))
-                {
-                    isbn = value;                }
-                else
-                {
-                    isbn = "error";
-                }
-                
+
             }
         }
 
-        public string Author 
+        public string Author //readonly property
         {
-          get => author;
+            get => author;
         }
 
-        public override string? ToString()
+        public override string ToString()
         {
-            return $"Author: {this.author}, Name: {this.Name}, Publisher: {this.publisher}, Price: {this.Price:F2}, ISBN: {this.Isbn} , Theme: {theme}";
+            return $"Author: {this.author}, Name: {this.name}, Publisher: {this.publisher}, Price: {this.price:F2}, ISBN: {this.isbn}, Theme: {theme}";
         }
 
-        /*
-        public void GetBookDetails()
+        public string GetBookDetails(string isbnNumber)
         {
-            Console.WriteLine($"{this.author}, {this.Name}, {this.publisher}, {this.Price:F2}, {this.Isbn}");
-        }
-        */
-
-        public string GetBookDetail(string isbnValue)
-        {
-            if (this.Isbn == isbnValue)
+            if (this.isbn == isbnNumber)
             {
                 return ToString();
             }
             else
             {
-                return "kirjan tietoja ei voi tulostaa";
+                return "Book information can't be printed.";
             }
-
         }
-        public static void ChangeTheme()
+
+        /*public static void ChangeTheme()  //Changing the theme
         {
-            Console.WriteLine("Anna teema:");
+            Console.WriteLine("Give a theme: ");
             string? input = Console.ReadLine();
-            if (input != null)
+            if (input !=  null)
             {
                 theme = input;
             }
-   
-
         }
+        */
     }
+
+
+
 }
