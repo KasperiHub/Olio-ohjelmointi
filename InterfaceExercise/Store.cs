@@ -23,10 +23,13 @@ namespace InterfaceExercise
             this.name = name;
             this.revenue = revenue;
             this.products = products;
-            productsList = new List<Product>();
         }
 
 
+        public int GetCustomerCount()
+        {
+            return customersList.Count;
+        }
 
         public void AddCustomer(Customer customer)
         {
@@ -53,9 +56,10 @@ namespace InterfaceExercise
                 Console.WriteLine(p);
             }
         }
+
         public override string? ToString()
         {
-            return $"Kaupan nimi: {this.name}, Kaupan liikevaihto: {this.revenue}, Kaupan tuotteiden määrä: {this.products}";
+            return $"Kaupan nimi: {this.name}, Kaupan liikevaihto: {this.revenue}, Kaupan tuotteiden määrä: {this.products} Asiakkaiden määrä: {GetCustomerCount()}";
         }
 
 
