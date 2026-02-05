@@ -12,11 +12,12 @@ namespace InterfaceExercise
     {
         private string name;
         private double revenue;
-        private double products;
+        public double products;
 
 
         private List<Product> productsList = new List<Product>();
         private List<Customer> customersList = new List<Customer>();
+        
 
         public Store(string name, double revenue, double products)
         {
@@ -36,10 +37,16 @@ namespace InterfaceExercise
             customersList.Add(customer);
         }
 
+        public int GetProductCount()
+        {
+            return productsList.Count;
+        }
         public void AddProduct(Product product)
         {
             productsList.Add(product);
         }
+
+
 
         public void PrintCustomers()    
         {

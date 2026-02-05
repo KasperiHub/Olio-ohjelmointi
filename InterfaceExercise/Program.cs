@@ -18,6 +18,9 @@ namespace InterfaceExercise
             customersList.Add(new Customer("Jari Jarinen", 740.00));
             customersList.Add(new Customer("Mikko Pakarinen" , 00.30));
 
+
+
+
             Console.WriteLine("Tuoteeet");
             foreach (Product d in products)
             {
@@ -39,8 +42,15 @@ namespace InterfaceExercise
             }
             Console.WriteLine();
 
+            //K market tuotteiden määrän lasku
+            double sum = 0;
+            foreach (Product p in products)
+            {
+                sum += p.CalculateTotals();
+            }
+
             Console.WriteLine("Kaupan tuotteiden tulostaminen");
-            Store KMarket = new Store("K-kauppa", 1000000, 850);
+            Store KMarket = new Store("K-kauppa", 1000000, sum);
             KMarket.AddProduct(new Product("Maito", 1, 150));
             KMarket.AddProduct(new Product("RedBull", 2.30, 200));
             KMarket.AddProduct(new Product("Tikkari", 0.30, 500));
@@ -53,6 +63,8 @@ namespace InterfaceExercise
                 Console.WriteLine(d.ToString());
             }
             Console.WriteLine();
+
+
 
             Console.WriteLine("Asiakkaan etsiminen");
             foreach (Customer d in customersList)

@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 namespace InterfaceExercise
 {
-    internal class Product : IProduct
+    internal class Product : IProduct 
     {
         private string name;
         private double price;
-        private int count;
+        public int count;
 
         public Product(string name, double price, int amount)
         {
             this.name = name;
             this.price = price;
-            count = amount;
+            this.count = amount;
         }
 
         public double CalculateTotal()
         {
-            return price * count;
+            return price * this.count;
+        }
+        public double CalculateTotals()
+        {
+            return count;
         }
 
         public bool MatchesName(string value)
@@ -38,7 +42,7 @@ namespace InterfaceExercise
 
         public override string? ToString()
         {
-            return $"Nimi: {name}, Hinta: {price} €, Määrä: {count}";
+            return $"Nimi: {name}, Hinta: {price} €, Määrä: {this.count}";
         }
     }
 }
